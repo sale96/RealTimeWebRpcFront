@@ -1,0 +1,15 @@
+<!-- Create a for to join a meeting, if a meetingId exists in the localStorage, prefill the data with the meetingId -->
+<form [formGroup]="joinMeetingForm" (ngSubmit)="joinMeeting()">
+  <div class="form-group m-2">
+    <label for="meetingId">Meeting ID</label>
+    <input type="text" id="meetingId" formControlName="meetingId" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter the meeting ID" />
+  </div>
+  <div class="form-group m-2">
+    <label for="password">Password</label>
+    <input type="password" id="password" formControlName="password" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter the password" />
+  </div>
+  <div class="form-group m-2">
+    <button type="submit" class="bg-blue-500 text-white p-2 mb-2 rounded-md hover:bg-blue-700 cursor-pointer w-full text-center block">Join Meeting</button>
+    <a routerLink="/" class="text-blue-500 hover:text-blue-700 cursor-pointer">Back to home</a>
+  </div>
+</form>

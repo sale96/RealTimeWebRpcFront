@@ -1,0 +1,12 @@
+<!-- title -->
+<h1 class="text-2xl font-bold m-2 text-center">Welcome to the Conference App</h1>
+
+@if(hasMeetingId) {
+  <p class="text-lg font-bold m-2 text-center">You have a meeting ID: {{ meetingId }}</p>
+}
+
+<!-- buttons to create a new meeting or join a meeting one bellow and the same size the other with flexbox with hover effects -->
+<div class="flex flex-col w-full items-center justify-center">
+  <a *ngIf="!hasMeetingId" class="bg-blue-500 text-white p-2 rounded-md m-2 hover:bg-blue-700 cursor-pointer w-full text-center block" routerLink="/create-meeting">Create Meeting</a>
+  <a class="bg-blue-500 text-white p-2 rounded-md m-2 hover:bg-blue-700 cursor-pointer w-full text-center block" routerLink="/join-meeting">Join Meeting</a>
+</div>

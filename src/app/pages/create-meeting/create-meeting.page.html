@@ -1,0 +1,25 @@
+<!-- title -->
+<h1 class="text-2xl font-bold m-2 text-center">Create Meeting</h1>
+<!-- form to create a new meeting -->
+<form [formGroup]="createMeetingForm" (ngSubmit)="createMeeting()">
+  <div class="form-group m-2">
+    <label for="clientName">Client Name</label>
+    <input type="text" id="clientName" formControlName="clientName" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter your name" />
+  </div>
+  <div class="form-group m-2">
+    <label for="maxParticipants">Max Participants</label>
+    <input type="number" id="maxParticipants" formControlName="maxParticipants" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter the maximum number of participants" />
+  </div>
+  <div class="form-group m-2">
+    <label for="startTime">Start Time</label>
+    <input type="datetime-local" id="startTime" formControlName="startTime" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter the start time" />
+  </div>
+  <div class="form-group m-2">
+    <label for="password">Password</label>
+    <input type="password" id="password" formControlName="password" class="w-full p-2 border border-gray-300 rounded-md" placeholder="Enter the password" />
+  </div>
+  <div class="form-group m-2">
+    <button type="submit" class="bg-blue-500 text-white p-2 mb-2 rounded-md hover:bg-blue-700 cursor-pointer w-full text-center block">Create Meeting</button>
+    <a routerLink="/" class="text-blue-500 hover:text-blue-700 cursor-pointer">Back to home</a>
+  </div>
+</form>
